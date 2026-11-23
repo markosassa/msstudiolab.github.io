@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MS StudioLab – Siti web, menu digitali e prenotazioni su misura</title>
+<meta name="description" content="MS StudioLab di Marco Sassanelli: siti web professionali, app per menu digitali e sistemi di prenotazione per attività locali. Consulenza gratuita.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B2545;--navy2:#13386b;--sky:#2FA4E7;--orange:#F47B20;
+  --bg:#F5F8FC;--surface:#fff;--text:#12233d;--muted:#52627a;--line:#d8e1ee;
+  --h:'Bricolage Grotesque','Trebuchet MS',sans-serif;--b:'Figtree',system-ui,sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#081a33;--surface:#0f2a50;--text:#e8eff9;--muted:#9fb2cc;--line:#244674}}
+:root[data-theme="dark"]{--bg:#081a33;--surface:#0f2a50;--text:#e8eff9;--muted:#9fb2cc;--line:#244674}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1.0625rem/1.6 var(--b)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--navy);color:#fff}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font:800 1.25rem var(--h);text-decoration:none;letter-spacing:-.01em}
+.logo b{color:var(--orange)}
+nav a{margin-left:20px;text-decoration:none;font-weight:500;font-size:.95rem;opacity:.85}
+nav a:hover{opacity:1}
+.hero{background:var(--navy);color:#fff;padding:64px 0 80px;overflow:hidden;position:relative}
+.hero::after{content:"";position:absolute;right:-8%;top:0;bottom:0;width:38%;background:linear-gradient(115deg,transparent 40%,var(--orange) 40%,var(--orange) 42%,var(--sky) 42%,var(--sky) 52%,transparent 52%);opacity:.9}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;position:relative;z-index:1}
+h1{font:800 clamp(2.4rem,6vw,4.4rem)/1.02 var(--h);margin:0 0 20px;letter-spacing:-.03em}
+h1 span{display:block;color:var(--sky)}
+.lead{font-size:1.2rem;max-width:34ch;color:#cfe0f5;margin:0 0 30px}
+.btn{display:inline-block;background:var(--orange);color:#fff;font:700 1rem var(--b);padding:14px 26px;border-radius:999px;text-decoration:none;border:0;cursor:pointer}
+.btn:hover{background:#ff8d3a}
+.btn.ghost{background:transparent;border:2px solid #5d82b3;margin-left:10px}
+.mock{position:relative;height:340px}
+.browser{position:absolute;left:0;top:10px;width:88%;background:#fff;border-radius:12px;box-shadow:0 20px 40px rgba(0,0,0,.35);overflow:hidden;color:#12233d}
+.browser i{display:block;height:26px;background:#e6edf7}
+.browser .bar{height:18px;margin:10px;background:var(--sky);border-radius:4px;width:60%}
+.browser .ln{height:8px;margin:8px 10px;background:#d4deec;border-radius:4px}
+.browser .row{display:flex;gap:8px;margin:12px 10px 14px}
+.browser .row u{flex:1;height:54px;background:#eef3fa;border-radius:6px;border-top:4px solid var(--orange)}
+.phone{position:absolute;right:2%;bottom:0;width:38%;background:#fff;border:6px solid #0a1424;border-radius:22px;padding:14px 10px;color:#12233d;box-shadow:0 20px 40px rgba(0,0,0,.4);font-size:.72rem}
+.phone strong{display:block;font:700 .8rem var(--b);margin-bottom:8px}
+.phone p{margin:0 0 6px;padding:7px;background:#eef3fa;border-radius:6px}
+.phone em{display:block;margin-top:8px;padding:7px;background:var(--sky);color:#fff;text-align:center;border-radius:6px;font-style:normal;font-weight:700}
+section{padding:76px 0}
+h2{font:800 clamp(1.8rem,4vw,2.6rem)/1.1 var(--h);margin:0 0 14px;letter-spacing:-.02em;max-width:20ch}
+.sub{color:var(--muted);max-width:56ch;margin:0 0 40px}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:28px;border-top:5px solid var(--orange)}
+.svc:nth-child(2){border-top-color:var(--sky)}
+.svc:nth-child(3){border-top-color:var(--navy2)}
+.svc h3{font:700 1.3rem/1.2 var(--h);margin:0 0 10px}
+.svc p{margin:0 0 14px;color:var(--muted)}
+.svc ul{margin:0;padding-left:18px;font-size:.96rem}
+.band{background:var(--navy);color:#fff}
+.band .sub{color:#b9cde6}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin:0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;border-left:3px solid var(--orange);padding-left:16px}
+.steps li::before{content:counter(s);display:block;font:800 2rem var(--h);color:var(--sky)}
+.steps b{display:block;margin-bottom:4px}
+.steps span{color:#b9cde6;font-size:.95rem}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.facts{display:grid;gap:14px;margin:0;padding:0;list-style:none}
+.facts li{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--sky);padding:14px 18px;border-radius:4px}
+.facts b{font-family:var(--h)}
+.contact{background:var(--surface);border-top:1px solid var(--line)}
+form{display:grid;gap:14px;max-width:520px}
+label{font-weight:700;font-size:.95rem;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:12px 14px;border:1.5px solid var(--line);border-radius:8px;background:var(--bg);color:var(--text);width:100%}
+textarea{min-height:110px;resize:vertical}
+.social{display:flex;gap:14px;margin-top:22px}
+.social a{font-weight:700;text-decoration:none;border-bottom:2px solid var(--orange)}
+footer{background:var(--navy);color:#b9cde6;padding:26px 0;font-size:.9rem}
+@media (max-width:820px){
+  .hero .wrap,.about{grid-template-columns:1fr}
+  .hero::after{opacity:.25;width:60%}
+  .services,.steps{grid-template-columns:1fr}
+  .mock{height:300px}
+  nav a:not(.btn){display:none}
+  section{padding:56px 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">MS <b>Studio</b>Lab</a>
+    <nav><a href="#servizi">Servizi</a><a href="#metodo">Come lavoro</a><a href="#chi-sono">Chi sono</a><a href="#contatti">Contatti</a></nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Digitalizza <span>la tua attività.</span></h1>
+      <p class="lead">Sviluppo soluzioni digitali su misura per negozi, ristoranti e studi professionali. Parli con chi scrive il codice.</p>
+      <a class="btn" href="#contatti">Richiedi una consulenza gratuita</a>
+      <a class="btn ghost" href="#servizi">Cosa realizzo</a>
+    </div>
+    <div class="mock" aria-hidden="true">
+      <div class="browser"><i></i><div class="bar"></div><div class="ln" style="width:80%"></div><div class="ln" style="width:55%"></div><div class="row"><u></u><u></u><u></u></div></div>
+      <div class="phone"><strong>Prenota un appuntamento</strong><p>Data e ora</p><p>Servizio</p><em>Conferma</em></div>
+    </div>
+  </div>
+</div>
+
+<section id="servizi">
+  <div class="wrap">
+    <h2>Tre strumenti per far lavorare meglio la tua attività</h2>
+    <p class="sub">Ogni progetto parte dalle tue esigenze: niente modelli preconfezionati, niente canoni nascosti da decifrare.</p>
+    <div class="services">
+      <article class="svc">
+        <h3>Siti web professionali e su misura</h3>
+        <p>Il tuo sito veloce, leggibile da smartphone e trovabile su Google.</p>
+        <ul><li>Sito vetrina o con più pagine</li><li>Contatti, mappa e galleria</li><li>Pronto per la SEO locale</li></ul>
+      </article>
+      <article class="svc">
+        <h3>App per menu digitali e ristorazione</h3>
+        <p>Un menu sempre aggiornato, raggiungibile con un QR code sul tavolo.</p>
+        <ul><li>Modifichi piatti e prezzi in autonomia</li><li>Allergeni e categorie</li><li>QR code pronto da stampare</li></ul>
+      </article>
+      <article class="svc">
+        <h3>Sistemi di prenotazione appuntamenti</h3>
+        <p>I clienti prenotano da soli, tu smetti di rispondere al telefono.</p>
+        <ul><li>Calendario con orari e servizi</li><li>Conferme e promemoria</li><li>Gestione semplice da pannello</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="metodo" class="band">
+  <div class="wrap">
+    <h2>Dalla prima chiamata alla messa online</h2>
+    <p class="sub">Un percorso in quattro passaggi, con te coinvolto a ogni tappa.</p>
+    <ol class="steps">
+      <li><b>Consulenza gratuita</b><span>Capiamo cosa ti serve e cosa no.</span></li>
+      <li><b>Proposta chiara</b><span>Tempi e costi definiti prima di iniziare.</span></li>
+      <li><b>Sviluppo</b><span>Ti mostro l’avanzamento e raccolgo i tuoi feedback.</span></li>
+      <li><b>Pubblicazione e supporto</b><span>Online, formazione all’uso e assistenza.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="chi-sono">
+  <div class="wrap about">
+    <div>
+      <h2>Chi c’è dietro MS StudioLab</h2>
+      <p>Mi chiamo <b>Marco Sassanelli</b>, sviluppatore full-stack a Bari. Dal 2015 realizzo applicazioni web e mobile, e dal 2019 lavoro sul backend di gestionali per un’azienda di distribuzione tecnologica.</p>
+      <p>Porto la stessa cura dei progetti aziendali anche alle piccole attività del territorio: soluzioni affidabili, spiegate in parole semplici.</p>
+    </div>
+    <ul class="facts">
+      <li><b>Dal 2015</b> sviluppo web e mobile</li>
+      <li><b>Laravel, React, MySQL</b> e integrazioni con WhatsApp, pagamenti e fatturazione</li>
+      <li><b>Bari e Puglia</b>, anche da remoto in tutta Italia</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contatti" class="contact">
+  <div class="wrap">
+    <h2>Parliamo del tuo progetto</h2>
+    <p class="sub">La prima consulenza è gratuita e senza impegno. Scrivimi due righe e ti rispondo io.</p>
+    <form id="f">
+      <label>Nome<input name="nome" required autocomplete="name"></label>
+      <label>Di cosa hai bisogno?
+        <select name="servizio"><option>Sito web</option><option>Menu digitale</option><option>Prenotazione appuntamenti</option><option>Altro</option></select>
+      </label>
+      <label>Messaggio<textarea name="msg" required></textarea></label>
+      <button class="btn" type="submit">Invia richiesta</button>
+    </form>
+    <div class="social"><a href="#" id="fb">Facebook</a><a href="#" id="ig">Instagram</a><a href="#" id="in">LinkedIn</a></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© 2026 MS StudioLab – Marco Sassanelli · Bari</div></footer>
+
+<script>
+// Modifica questi valori con i tuoi contatti reali
+var EMAIL = "info@msstudiolab.it";
+var LINKS = {fb:"#", ig:"#", in:"#"};
+Object.keys(LINKS).forEach(function(k){var e=document.getElementById(k); if(e) e.href=LINKS[k];});
+document.getElementById("f").addEventListener("submit",function(ev){
+  ev.preventDefault();
+  var d=new FormData(ev.target);
+  var body="Nome: "+d.get("nome")+"\nServizio: "+d.get("servizio")+"\n\n"+d.get("msg");
+  location.href="mailto:"+EMAIL+"?subject="+encodeURIComponent("Richiesta consulenza – "+d.get("servizio"))+"&body="+encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
